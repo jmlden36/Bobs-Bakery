@@ -60,7 +60,7 @@ namespace BakeryBread.Tests
     }
 
     [TestMethod]
-    public void BreadCost_CalculatesCostOfThirtyZeroBread_True()
+    public void BreadCost_CalculatesCostOfZeroBread_True()
     {
       Bread newBread = new Bread(5, 3, 10);
       int breadCount = 0;
