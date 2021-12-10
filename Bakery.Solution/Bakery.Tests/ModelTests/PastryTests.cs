@@ -21,5 +21,15 @@ namespace BakeryPastry.Tests
       int expectedCost = 2;      
       Assert.AreEqual(pastryCost, expectedCost);
     }
+
+    [TestMethod]
+    public void PastryCost_CalculatesCostOfTwoPastry_True()
+    {
+      Pastry newPastry = new Pastry(2, 3, .5);
+      int pastryCount = 2;
+      int pastryCost = newPastry.PastryCost(pastryCount);
+      int expectedCost = 4;      
+      Assert.AreEqual(pastryCost, expectedCost);
+    }
   }
 }
