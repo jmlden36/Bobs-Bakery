@@ -54,7 +54,6 @@ namespace BakeryPastry.Tests
       Assert.AreEqual(pastryCost, expectedCost);
     }
 
-
     [TestMethod]
     public void PastryCost_CalculatesCostOfFortyFourPastry_True()
     {
@@ -62,6 +61,16 @@ namespace BakeryPastry.Tests
       int pastryCount = 44;
       int pastryCost = newPastry.PastryCost(pastryCount);
       int expectedCost = 74;      
+      Assert.AreEqual(pastryCost, expectedCost);
+    }
+
+    [TestMethod]
+    public void PastryCost_CalculatesCostOfFortyZeroPastry_True()
+    {
+      Pastry newPastry = new Pastry(2, 3, 5);
+      int pastryCount = 0;
+      int pastryCost = newPastry.PastryCost(pastryCount);
+      int expectedCost = 0;      
       Assert.AreEqual(pastryCost, expectedCost);
     }
   }
