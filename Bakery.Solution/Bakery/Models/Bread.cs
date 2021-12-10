@@ -17,12 +17,16 @@ namespace BakeryBread.Models
     }
     public int BreadCost(int input)
     {
-      
+      if (input % this.BreadDealCount == 0)
+      {
+        int cost = BreadDealPrice * (input/this.BreadDealCount);
+        return cost;
+      }
+      else
+      {
       int cost = input * this.RegularPrice;
       return cost; 
-    }
-      
-      
-    
+      }
+    } 
   }
 }
