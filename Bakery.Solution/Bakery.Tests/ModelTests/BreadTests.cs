@@ -9,6 +9,12 @@ namespace Bakery.Tests
   public class BreadTests
   {
     [TestMethod]
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    {
+      Bread newBread = new Bread(3, 10);            
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
+    [TestMethod]
     public void BreadCost_CalculatesCostOfOneBread_True()
     {
       int breadCount = 1;
