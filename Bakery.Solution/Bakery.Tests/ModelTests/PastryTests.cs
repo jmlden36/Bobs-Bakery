@@ -9,13 +9,13 @@ namespace BakeryPastry.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastry = new Pastry(2, 3, .5);            
+      Pastry newPastry = new Pastry(2, 3, 5);            
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
     [TestMethod]
     public void PastryCost_CalculatesCostOfOnePastry_True()
     {
-      Pastry newPastry = new Pastry(2, 3, .5);
+      Pastry newPastry = new Pastry(2, 3, 5);
       int pastryCount = 1;
       int pastryCost = newPastry.PastryCost(pastryCount);
       int expectedCost = 2;      
@@ -25,7 +25,7 @@ namespace BakeryPastry.Tests
     [TestMethod]
     public void PastryCost_CalculatesCostOfTwoPastry_True()
     {
-      Pastry newPastry = new Pastry(2, 3, .5);
+      Pastry newPastry = new Pastry(2, 3, 5);
       int pastryCount = 2;
       int pastryCost = newPastry.PastryCost(pastryCount);
       int expectedCost = 4;      
@@ -36,7 +36,7 @@ namespace BakeryPastry.Tests
     [TestMethod]
     public void PastryCost_CalculatesCostOfThreePastry_True()
     {
-      Pastry newPastry = new Pastry(2, 3, .5);
+      Pastry newPastry = new Pastry(2, 3, 5);
       int pastryCount = 3;
       int pastryCost = newPastry.PastryCost(pastryCount);
       int expectedCost = 5;      

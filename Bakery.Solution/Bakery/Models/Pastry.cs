@@ -4,9 +4,9 @@ namespace BakeryPastry.Models
   {
     public int RegularPrice { get; set; }
     public int PastryDealCount { get; set; }
-    public double PastryDealPrice { get; set; }
+    public int PastryDealPrice { get; set; }
 
-    public Pastry(int regularPrice, int pastryDealCount, double pastryDealPrice)
+    public Pastry(int regularPrice, int pastryDealCount, int pastryDealPrice)
     {
       RegularPrice = 2;
       PastryDealCount = pastryDealCount;
@@ -14,8 +14,16 @@ namespace BakeryPastry.Models
     }
     public int PastryCost(int input)
     {
-      int cost = input * 2;
-      return cost;
+      if (input % this.PastryDealCount == 0)
+      {
+        int cost = this.PastryDealPrice * (input/this.PastryDealCount);
+        return cost;
+      }
+      else
+      {
+        int cost = this.RegularPrice * input;
+        return cost;
+      }
     }
   }
 }
