@@ -8,7 +8,7 @@ namespace BakeryBread.Models
 
     public Bread(int regularPrice, int breadDealCount, int breadDealPrice)
     {
-      RegularPrice = 5;
+      RegularPrice = regularPrice;
       BreadDealCount = breadDealCount;
       BreadDealPrice = breadDealPrice;      
     }

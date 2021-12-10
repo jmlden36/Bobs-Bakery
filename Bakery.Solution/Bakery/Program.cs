@@ -6,9 +6,9 @@ using BakeryBread.Models;
 
 public class Program
 { 
-  public static int CalcTotal(int val1, int val2)
+  public static int CalcTotal(int val1, int val2, int val3)
   {
-    int total = val1 + val2;
+    int total = val1 + val2 + val3;
     return total;
   }
   public static void Main()
@@ -18,7 +18,7 @@ public class Program
     Pastry pastryDeals = new Pastry(2, 3, 5);
     
 
-    Console.WriteLine("\n\n\nWelcome to Pierre's Bakery.  Today's prices are\n===============================================\n  Bread: 1 for $" + breadDeals.RegularPrice + ".\n  Today's Bread Deal: Buy 2 get 1 free!\n\n  Pastry: 1 for $" + pastryDeals.RegularPrice + ".\n  Today's Pastry Deal: Buy 2 get the third half off!");
+    Console.WriteLine("\n\n\nWelcome to Pierre's Bakery.  Here are today's prices:\n=====================================================\n  Bread: 1 sourdough for $" + breadDeals.RegularPrice + "\n         1 french bread for $" + frBreadDeals.RegularPrice + "\n\n  -->Today's Bread Deal: Buy 2 get 1 free!\n\n  Pastry: 1 danish for $" + pastryDeals.RegularPrice + ".\n\n  -->Today's Pastry Deal: Buy 2 get the third half off!");
     
     Console.WriteLine("\n\n\nHow many loafs of sourdough bread would you like?\n\nPlease enter a number");
     int breadNum = int.Parse(Console.ReadLine()); 
@@ -32,6 +32,6 @@ public class Program
     Console.WriteLine("Does this order look correct?\n  " + breadNum + " loafs of sourdough bread\n  " + pastryNum + " pastries\n  " + frBreadNum + " loafs of french bread\n'Y' for yes or 'N' for no");
     string correctOrder = (Console.ReadLine()).ToLower();
     Console.WriteLine(correctOrder);
-    Console.WriteLine("Your total will be: $" + CalcTotal(breadDeals.BreadCost(breadNum), (pastryDeals.PastryCost(pastryNum))));
+    Console.WriteLine("Your total will be: $" + CalcTotal(breadDeals.BreadCost(breadNum), (pastryDeals.PastryCost(pastryNum)), (frBreadDeals.BreadCost(frBreadNum))));
   }
 }
