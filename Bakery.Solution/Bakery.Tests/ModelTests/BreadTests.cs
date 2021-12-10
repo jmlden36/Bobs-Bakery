@@ -49,6 +49,26 @@ namespace BakeryBread.Tests
       int breadCost = newBread.BreadCost(breadCount);
       int expectedCost = 15;      
       Assert.AreEqual(breadCost, expectedCost);
-    }        
+    }
+
+    [TestMethod]
+    public void BreadCost_CalculatesCostOfThirtyTwoBread_True()
+    {
+      Bread newBread = new Bread(5, 3, 10);
+      int breadCount = 32;
+      int breadCost = newBread.BreadCost(breadCount);
+      int expectedCost = 110;      
+      Assert.AreEqual(breadCost, expectedCost);
+    }
+
+    [TestMethod]
+    public void BreadCost_CalculatesCostOfThirtyZeroBread_True()
+    {
+      Bread newBread = new Bread(5, 3, 10);
+      int breadCount = 0;
+      int breadCost = newBread.BreadCost(breadCount);
+      int expectedCost = 0;      
+      Assert.AreEqual(breadCost, expectedCost);
+    }
   }
 }
