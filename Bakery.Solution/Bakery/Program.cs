@@ -14,16 +14,22 @@ public class Program
   public static void Main()
   {
     Bread breadDeals = new Bread(5, 3, 10);
+    Bread frBreadDeals = new Bread(4, 3, 8);
     Pastry pastryDeals = new Pastry(2, 3, 5);
+    
 
     Console.WriteLine("\n\n\nWelcome to Pierre's Bakery.  Today's prices are\n===============================================\n  Bread: 1 for $" + breadDeals.RegularPrice + ".\n  Today's Bread Deal: Buy 2 get 1 free!\n\n  Pastry: 1 for $" + pastryDeals.RegularPrice + ".\n  Today's Pastry Deal: Buy 2 get the third half off!");
-    Console.WriteLine("\n\n\nHow many loafs of your bread would you like?\n\nPlease enter a number");
+    
+    Console.WriteLine("\n\n\nHow many loafs of sourdough bread would you like?\n\nPlease enter a number");
     int breadNum = int.Parse(Console.ReadLine()); 
     
     Console.WriteLine("\n\n\nHow many pastries would you like?\n\nPlease enter a number");
     int pastryNum = int.Parse(Console.ReadLine());
     
-    Console.WriteLine("Does this order look correct?\n  " + breadNum + " loafs of bread\n  " + pastryNum + " pastries\n'Y' for yes or 'N' for no");
+    Console.WriteLine("How many loafs of french bread would you like?\n\nPlease enter a number");
+    int frBreadNum = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Does this order look correct?\n  " + breadNum + " loafs of sourdough bread\n  " + pastryNum + " pastries\n  " + frBreadNum + " loafs of french bread\n'Y' for yes or 'N' for no");
     string correctOrder = (Console.ReadLine()).ToLower();
     Console.WriteLine(correctOrder);
     Console.WriteLine("Your total will be: $" + CalcTotal(breadDeals.BreadCost(breadNum), (pastryDeals.PastryCost(pastryNum))));
