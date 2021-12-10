@@ -1,23 +1,28 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bakery.Models
+namespace BakeryBread.Models
 {
   public class Bread
-  {
+  {    
+    public int RegularPrice { get; set; }
     public int BreadDealPrice { get; set; }
-
     public int BreadDealCount { get; set; }
 
-    public Bread(int breadDealCount, int breadDealPrice)
+    public Bread(int regularPrice, int breadDealCount, int breadDealPrice)
     {
+      RegularPrice = 5;
       BreadDealCount = breadDealCount;
       BreadDealPrice = breadDealPrice;      
     }
-    public static int BreadCost(int input)
+    public int BreadCost(int input)
     {
-      int cost = input * 5;
-      return cost;
+      
+      int cost = input * this.RegularPrice;
+      return cost; 
     }
+      
+      
+    
   }
 }
