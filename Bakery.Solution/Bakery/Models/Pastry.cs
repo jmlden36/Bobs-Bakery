@@ -14,16 +14,21 @@ namespace BakeryPastry.Models
     }
     public int PastryCost(int input)
     {
-      if (input % this.PastryDealCount == 0)
+      if (input % PastryDealCount == 0)
       {
-        int cost = this.PastryDealPrice * (input/this.PastryDealCount);
+        int cost = PastryDealPrice * (input / PastryDealCount);
         return cost;
+      }
+      else if(input > PastryDealCount)
+      {
+      int cost = (((input -(input % PastryDealCount)) / PastryDealCount) * PastryDealPrice) + ((input % PastryDealCount) * RegularPrice);
+      return cost; 
       }
       else
       {
-        int cost = this.RegularPrice * input;
+        int cost = input * RegularPrice;
         return cost;
       }
-    }
+    } 
   }
 }
