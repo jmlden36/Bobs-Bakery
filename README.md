@@ -30,7 +30,7 @@ _{Bob's Bakery is a console application for Pierre's Bakery that shows a user th
 * _Read the menu and follow the prompts to place your order for bread and pastries and see the price with discounts added_
 * _When you are finished type "dotnet run" again if you want to place another order and see the price_
 * _If you would like to run the tests for this project use the command "cd .." and then the command cd "Bakery.Tests"_
-* _Next use the command "dotnet resore"_
+* _Next use the command "dotnet restore"_
 * _Now use the command "dotnet test" to run all of the the tests for this project and see the results in the terminal_
 
 
