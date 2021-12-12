@@ -10,15 +10,18 @@
 * _C#_
 * _.Net 5_
 * _NuGet_
+* _Markdown_
+* _VScode_
 
 
 ## Description
 
-_{Bob's Bakery is a console application for Pierre's Bakery that shows a user the menu for the day and allows them to place an order to see the total price of their order.}_
+_Bob's Bakery is a console application for Pierre's Bakery that shows a user the menu for the day and allows them to place an order to see the total price of their order._
 
 ## Setup/Installation Requirements
 
-* _Install .NET Framework_ 
+* _Install C# and .NET [here for Mac](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)  or  [here for PC](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-windows-x64-installer) and follow the installation instructions_
+* _If you want to experiment with the C# code used to make this project, install a REPL(read-evaluate-print-loop) of your choice such as dotnet script and configure as necessary_
 * _Open the terminal on your desktop_
 * _Once in the terminal, use it to navigate to your desktop folder_
 * _Once inside your desktop folder, use the command "git clone https://github.com/jmlden36/Bobs-Bakery"_
